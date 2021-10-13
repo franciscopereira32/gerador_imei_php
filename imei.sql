@@ -1,0 +1,1 @@
+select * from imei.numero_imei

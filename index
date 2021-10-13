@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Busca IMEI</title>
+</head>
+<body>
+	<h2>Gerar tabela de imei</h2>
+	<form action="busca.php" method="GET">
+		<label>Modelo do dispositivo</label>
+		<input type="text" name="modelo_dispositivo" size="50" placeholder="Insira o nome do dispositivo">
+		<button style="with:100px;">
+			Buscar
+		</button>
+		
+	</form>
+
+</body>
+</html>

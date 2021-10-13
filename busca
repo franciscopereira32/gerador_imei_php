@@ -1,0 +1,16 @@
+<?php
+if (!isset($_GET['modelo'])){
+	header("location: index.html");
+	exit;
+}
+$modelo = "%".trim($_GET['modelo'])."%";
+$dbh = new PDO('mysql:host=127.0.0.1;dbname=imei', 'root', 'Henri@1988');
+$sth = $dbh->prepare('SELECT * FROM 'imei' WHERE 'modelo' LIKE :modelo');
+$sth->bindParam(':modelo', $modelo, PDO::PARAM_STR);
+$sth->execute();
+
+$resultados = $sth->fetchAll(PDO::FETCH_ASSOC);
+echo "<pre>";
+print_r($resultados);
+exit;
+?>
